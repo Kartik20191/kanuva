@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coin X - Final Match Event</title>
+    <title>Class 12 Business Studies</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,484 +14,902 @@
         }
         
         body {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            color: #fff;
-            min-height: 100vh;
-            padding: 20px 15px;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-        
-        header {
-            text-align: center;
-            padding: 20px 0 15px;
-            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 8px;
-        }
-        
-        .logo-icon {
-            font-size: 2.2rem;
-            color: #FFD700;
-            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
-        }
-        
-        h1 {
-            font-size: 2.2rem;
-            background: linear-gradient(90deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: 0.5px;
-        }
-        
-        .subtitle {
-            font-size: 1rem;
-            color: #E6E6FA;
-            margin-top: 3px;
-            font-weight: 300;
-        }
-        
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 18px;
-            padding: 25px 20px;
-            border: 1px solid rgba(255, 215, 0, 0.15);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-        }
-        
-        .card:active {
-            transform: scale(0.99);
-        }
-        
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-        }
-        
-        .card-icon {
-            font-size: 1.8rem;
-            color: #FFD700;
-        }
-        
-        .card-title {
-            font-size: 1.5rem;
-            color: #FFD700;
-        }
-        
-        /* Event Details Card Styling */
-        .info-item {
-            margin-bottom: 18px;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.25);
-            border-radius: 12px;
-            border-left: 4px solid #FFD700;
-            transition: all 0.3s;
-        }
-        
-        .info-item:hover {
-            background: rgba(255, 215, 0, 0.1);
-            transform: translateX(5px);
-        }
-        
-        .info-label {
-            font-size: 0.95rem;
-            color: #E6E6FA;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .info-label i {
-            color: #FFD700;
-        }
-        
-        .info-value {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #fff;
-        }
-        
-        .date-box {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(26, 26, 46, 0.5));
-            padding: 18px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 10px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-        }
-        
-        .date-value {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #FFD700;
-            margin: 10px 0;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-        }
-        
-        .countdown {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        .countdown-item {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 12px 8px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            transition: all 0.3s;
-        }
-        
-        .countdown-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .countdown-value {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #FFD700;
-        }
-        
-        .countdown-label {
-            font-size: 0.8rem;
-            color: #E6E6FA;
-            margin-top: 3px;
-        }
-        
-        .prize-box .info-value {
-            font-size: 1.1rem;
+            background: #f5f5f5;
+            color: #333;
             line-height: 1.6;
-            font-weight: 500;
         }
         
-        .prize-box .info-value br {
-            margin-bottom: 8px;
-            display: block;
-        }
-        
-        .action-buttons {
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #2c3e50;
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .btn {
-            padding: 18px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 12px;
+            align-items: center;
+            z-index: 1000;
+            color: white;
         }
         
-        .btn-primary {
-            background: linear-gradient(90deg, #FFD700, #FFA500);
-            color: #1a1a2e;
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        .app-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
         }
         
-        .btn-primary:hover {
-            background: linear-gradient(90deg, #FFA500, #FFD700);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+        .loading-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            overflow: hidden;
         }
         
-        .btn:active {
-            transform: scale(0.97);
+        .loading-progress {
+            height: 100%;
+            width: 0%;
+            background: white;
+            animation: loading 2s forwards;
         }
         
-        footer {
+        @keyframes loading {
+            to { width: 100%; }
+        }
+        
+        /* Header */
+        .app-header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
             text-align: center;
-            margin-top: 30px;
-            padding: 20px 0;
-            color: #B0B0D0;
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
-        /* Swipe indicator for mobile */
-        .swipe-indicator {
-            text-align: center;
-            color: #E6E6FA;
+        .app-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .app-subtitle {
             font-size: 0.9rem;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            opacity: 0.8;
         }
         
-        .swipe-icon {
-            color: #FFD700;
-            animation: bounce 1.5s infinite;
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
         }
         
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(5px); }
+        /* Chapters Grid */
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
         }
         
-        /* Professional badge styles */
-        .badge {
-            display: inline-block;
-            padding: 5px 12px;
-            background: rgba(255, 215, 0, 0.15);
-            color: #FFD700;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            margin-top: 5px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-        }
-        
-        /* Status indicators */
-        .status-completed {
-            color: #4CAF50;
-        }
-        
-        .status-in-progress {
-            color: #FF9800;
-        }
-        
-        .status-not-started {
-            color: #F44336;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 380px) {
-            h1 {
-                font-size: 1.9rem;
-            }
-            
-            .card {
-                padding: 20px 15px;
-            }
-            
-            .countdown {
+        @media (min-width: 768px) {
+            .chapters-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 8px;
-            }
-            
-            .info-value {
-                font-size: 1.2rem;
-            }
-            
-            .date-value {
-                font-size: 1.5rem;
             }
         }
         
-        /* Animation for countdown numbers */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        @media (min-width: 1024px) {
+            .chapters-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
         
-        .countdown-value {
-            animation: pulse 2s infinite;
+        /* Chapter Card */
+        .chapter-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+            border-left: 4px solid #3498db;
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .chapter-number {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chapter-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chapter-desc {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        /* Content Screen */
+        #content-screen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 100;
+            overflow-y: auto;
+        }
+        
+        .content-header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .content-title {
+            font-size: 1.2rem;
+        }
+        
+        .back-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .content-body {
+            padding: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        .notes-list {
+            list-style-type: none;
+        }
+        
+        .notes-list li {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid #3498db;
+        }
+        
+        .question-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .question {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .answer {
+            color: #555;
+        }
+        
+        /* Navigation */
+        .content-nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            background: white;
+            border-top: 1px solid #ecf0f1;
+            position: sticky;
+            bottom: 0;
+        }
+        
+        .nav-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .nav-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+        
+        /* Password Modal */
+        #password-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        .modal-title {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .password-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        /* Hidden Link */
+        .hidden-link {
+            color: #3498db;
+            cursor: pointer;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <i class="fas fa-coins logo-icon"></i>
-                <h1>Coin X</h1>
-            </div>
-            <p class="subtitle">Final Match Event</p>
-            <div class="swipe-indicator">
-                <i class="fas fa-chevron-down swipe-icon"></i>
-                <span>Event Details Below</span>
-            </div>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="app-logo">Class 12 Business Studies</div>
+        <div>Loading...</div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+    
+    <!-- Home Screen -->
+    <div id="home-screen">
+        <header class="app-header">
+            <h1 class="app-title">Class 12 Business Studies</h1>
+            <div class="app-subtitle">NCERT Textbook with Notes & Questions</div>
         </header>
         
-        <!-- Event Details Card -->
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-calendar-alt card-icon"></i>
-                <h2 class="card-title">Event Details</h2>
-                <span class="badge">LIVE</span>
-            </div>
-            
-            <div class="info-item">
-                <div class="info-label">
-                    <i class="fas fa-flag-checkered"></i>
-                    Event Type
-                </div>
-                <div class="info-value">Final Match</div>
-                <span class="badge status-in-progress">ACTIVE</span>
-            </div>
-            
-            <div class="info-item">
-                <div class="info-label">
-                    <i class="fas fa-calendar-day"></i>
-                    Final Match Date
-                </div>
-                <div class="date-box">
-                    <div class="date-value">12 February 2026</div>
-                    <div class="countdown" id="countdown">
-                        <!-- Countdown will be inserted by JavaScript -->
-                    </div>
-                </div>
-            </div>
-            
-            <div class="info-item prize-box">
-                <div class="info-label">
-                    <i class="fa-solid fa-trophy"></i>
-                    Prize Details
-                </div>
-                <div class="info-value">
-                    🥇 All levels completed → ₹100<br>
-                    🥈 Half levels completed → ₹50<br>
-                    🥉 More than 30% completed → ₹30<br>
-                    ❌ Less than 30% → No reward
-                </div>
-                <span class="badge">GUARANTEED REWARDS</span>
-            </div>
-            
-            <div class="info-item">
-                <div class="info-label">
-                    <i class="fas fa-coins"></i>
-                    Coins Required
-                </div>
-                <div class="info-value">1700 Coins</div>
-                <span class="badge status-in-progress">TARGET</span>
+        <div class="container">
+            <div class="chapters-grid" id="chapters-list">
+                <!-- Chapters will be loaded here -->
             </div>
         </div>
-      
-        <footer>
-            <p>Coin X Final Match Event • Complete 1700 coins by 11 Feb 2026 to qualify</p>
-            
-        </footer>
+    </div>
+    
+    <!-- Content Screen -->
+    <div id="content-screen">
+        <div class="content-header">
+            <div class="content-title" id="content-title">Chapter Content</div>
+            <button class="back-btn" id="back-btn">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+        </div>
+        
+        <div class="content-body" id="content-body">
+            <!-- Content will be loaded here -->
+        </div>
+        
+        <div class="content-nav">
+            <button class="nav-btn" id="prev-btn">
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <button class="nav-btn" id="next-btn">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Password Modal -->
+    <div id="password-modal">
+        <div class="modal">
+            <h2 class="modal-title">Enter Password</h2>
+            <input type="password" class="password-input" id="password-input" placeholder="Enter password">
+            <button class="submit-btn" id="submit-password">Submit</button>
+        </div>
     </div>
 
     <script>
-        // Set the target date for the countdown (February 12, 2026)
-        const targetDate = new Date('February 4, 2026 00:00:00').getTime();
-        
-        // Update countdown every second
-        const countdownFunction = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-            
-            // Calculate days, hours, minutes, seconds
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            // Display the countdown
-            const countdownElement = document.getElementById("countdown");
-            countdownElement.innerHTML = `
-                <div class="countdown-item">
-                    <div class="countdown-value">${days}</div>
-                    <div class="countdown-label">Days</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-value">${hours}</div>
-                    <div class="countdown-label">Hours</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-value">${minutes}</div>
-                    <div class="countdown-label">Minutes</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-value">${seconds}</div>
-                    <div class="countdown-label">Seconds</div>
-                </div>
-            `;
-            
-            // If the countdown is over
-            if (distance < 0) {
-                clearInterval(countdownFunction);
-                countdownElement.innerHTML = "<div style='color:#FFD700; font-size:1.2rem; padding:10px; font-weight:bold;'>EVENT STARTED!</div>";
+        // Complete Chapter data
+        const chapters = [
+            {
+                id: 1,
+                name: "Nature and Purpose of Business",
+                number: "Chapter 1",
+                description: "Concept and characteristics of business, classification of business activities"
+            },
+            {
+                id: 2,
+                name: "Forms of Business Organisation",
+                number: "Chapter 2",
+                description: "Sole Proprietorship, Partnership, Joint Stock Company"
+            },
+            {
+                id: 3,
+                name: "Private, Public and Global Enterprises",
+                number: "Chapter 3",
+                description: "Private and public sector enterprises, global enterprises"
+            },
+            {
+                id: 4,
+                name: "Business Services",
+                number: "Chapter 4",
+                description: "Banking, insurance, transportation, warehousing"
+            },
+            {
+                id: 5,
+                name: "Emerging Modes of Business",
+                number: "Chapter 5",
+                description: "e-Business, benefits and limitations, online transactions"
+            },
+            {
+                id: 6,
+                name: "Social Responsibility and Business Ethics",
+                number: "Chapter 6",
+                description: "Social responsibility, business ethics, environmental protection"
+            },
+            {
+                id: 7,
+                name: "Formation of a Company",
+                number: "Chapter 7",
+                description: "Stages in formation of a company, promotion, incorporation"
+            },
+            {
+                id: 8,
+                name: "Sources of Business Finance",
+                number: "Chapter 8",
+                description: "Business finance, owners' funds, borrowed funds"
+            },
+            {
+                id: 9,
+                name: "Small Business and Enterprises",
+                number: "Chapter 9",
+                description: "Small scale industry, role of small business, problems"
+            },
+            {
+                id: 10,
+                name: "Internal Trade",
+                number: "Chapter 10",
+                description: "Wholesale and retail trade, services of wholesaler and retailer"
+            },
+            {
+                id: 11,
+                name: "International Business",
+                number: "Chapter 11",
+                description: "International business, benefits, documents involved"
             }
-        }, 1000);
-        
-        // Button interactions
-        document.getElementById('earn-btn').addEventListener('click', function() {
-            // Animation effect
-            this.style.transform = 'scale(0.95)';
+        ];
+
+        // Complete content data for all chapters
+        const chapterContents = {
+            1: {
+                notes: [
+                    "Business is an economic activity involving production and sale of goods/services with profit motive",
+                    "Characteristics: Economic activity, production/procurement, sale/exchange, regularity, profit earning, uncertainty, element of risk",
+                    "Business vs Profession vs Employment: Business involves production/sale, Profession requires specialized knowledge, Employment involves working for others",
+                    "Classification: Industry (primary, secondary, tertiary) and Commerce (trade and auxiliaries to trade)",
+                    "Objectives: Economic (profit, market standing, innovation) and Social (quality products, fair practices)",
+                    "Business risks: Possibility of inadequate profits due to uncertainties"
+                ],
+                questions: [
+                    {
+                        question: "What are the characteristics of business?",
+                        answer: "The characteristics of business are: (i) Economic activity (ii) Production/procurement of goods/services (iii) Sale/exchange (iv) Regularity in dealings (v) Profit earning (vi) Uncertainty of returns (vii) Element of risk"
+                    },
+                    {
+                        question: "Compare business with profession and employment",
+                        answer: "Business involves production/purchase and sale of goods/services for profit. Profession requires specialized knowledge and formal training. Employment involves working for others under contract for salary/wages"
+                    },
+                    {
+                        question: "Explain the economic and social objectives of business",
+                        answer: "Economic objectives: Profit earning, market standing, innovation, productivity. Social objectives: Quality products, fair trade practices, community welfare, employee welfare, environmental protection"
+                    },
+                    {
+                        question: "What is meant by business risk?",
+                        answer: "Business risk refers to possibility of inadequate profits or losses due to uncertainties. Nature includes: Arising from uncertainties, being essential part, varying with nature/size, profit being reward for risk bearing"
+                    }
+                ]
+            },
+            2: {
+                notes: [
+                    "Sole Proprietorship: Business owned, managed by single individual. No separate legal entity, unlimited liability",
+                    "Partnership: Association of 2-20 persons (10 for banking) to carry business and share profits",
+                    "Joint Hindu Family Business: Specific to India, managed by Karta, governed by Hindu law",
+                    "Cooperative Society: Voluntary association based on self-help and mutual help",
+                    "Joint Stock Company: Artificial person created by law, separate legal entity, perpetual succession",
+                    "Choice depends on: Nature of business, capital, liability, control, stability, legal formalities"
+                ],
+                questions: [
+                    {
+                        question: "What are the features of sole proprietorship?",
+                        answer: "Features: Single ownership, no separate legal entity, unlimited liability, direct control, no legal formalities, sole risk bearer and profit recipient"
+                    },
+                    {
+                        question: "Explain merits and limitations of partnership",
+                        answer: "Merits: Easy formation, larger resources, balanced decisions, risk sharing, secrecy. Limitations: Unlimited liability, limited resources, conflicts, lack of continuity"
+                    },
+                    {
+                        question: "Distinguish between partnership and joint stock company",
+                        answer: "Partnership: Agreement based, no separate entity, unlimited liability, less formalities. Company: Law created, separate entity, limited liability, more formalities"
+                    },
+                    {
+                        question: "What is cooperative society?",
+                        answer: "Voluntary association of persons joining for common economic interest. Features: Voluntary membership, separate legal entity, limited liability, democratic control, service motive"
+                    }
+                ]
+            },
+            3: {
+                notes: [
+                    "Private Sector: Owned by private individuals, profit motive",
+                    "Public Sector: Owned by government, service motive",
+                    "Departmental Undertakings: Managed by government departments (Railways, Post)",
+                    "Public Corporations: Created by special act (LIC, Air India)",
+                    "Government Companies: Registered under Companies Act (BHEL, SAIL)",
+                    "Global Enterprises/MNCs: Operate in several countries, huge capital, advanced technology"
+                ],
+                questions: [
+                    {
+                        question: "What are different types of public sector enterprises?",
+                        answer: "Types: Departmental undertakings (government departments), Public corporations (special act), Government companies (registered under Companies Act)"
+                    },
+                    {
+                        question: "Explain features of multinational corporations",
+                        answer: "Features: Giant size, international operations, centralized control, professional management, advanced technology, product innovation"
+                    },
+                    {
+                        question: "What are benefits of joint ventures?",
+                        answer: "Benefits: Access to technology, financial resources, new markets, low cost production, established brand name, innovation"
+                    },
+                    {
+                        question: "Explain changing role of public sector",
+                        answer: "From: Industrial base → Infrastructure → Regional balance → Check monopolies → Import substitution → Export promotion → Social welfare → Employment"
+                    }
+                ]
+            },
+            4: {
+                notes: [
+                    "Business Services: Intangible activities assisting business",
+                    "Banking: Accepting deposits, granting loans, payment services",
+                    "Insurance: Contract for compensation against risks for premium",
+                    "Principles: Utmost good faith, insurable interest, indemnity, subrogation",
+                    "Transportation: Movement of goods, creates place and time utility",
+                    "Warehousing: Scientific storage, stabilizes prices, ensures availability"
+                ],
+                questions: [
+                    {
+                        question: "What are business services? Explain importance",
+                        answer: "Intangible activities assisting business. Importance: Facilitate business, specialization, growth, efficiency, employment, customer satisfaction"
+                    },
+                    {
+                        question: "Explain functions of commercial banks",
+                        answer: "Functions: Primary (deposits, loans), Secondary (agency, utility), Credit creation, Cheque system promotion"
+                    },
+                    {
+                        question: "What is insurance? Explain principles",
+                        answer: "Contract where insurer compensates insured against specified risks. Principles: Utmost good faith, insurable interest, indemnity, subrogation, contribution"
+                    },
+                    {
+                        question: "Differentiate life and general insurance",
+                        answer: "Life: Covers human life, long-term, savings element. General: Covers assets, short-term, no savings, compensation based on loss"
+                    }
+                ]
+            },
+            5: {
+                notes: [
+                    "e-Business: Conducting business through internet",
+                    "Benefits: Easy formation, global reach, cost reduction, time saving",
+                    "Limitations: Low personal touch, delivery time, security concerns",
+                    "Online Transactions: Registration, order placement, payment, delivery",
+                    "Outsourcing: Contracting non-core activities to external agencies",
+                    "Security: Transaction risks, data storage risks, intellectual property threats"
+                ],
+                questions: [
+                    {
+                        question: "What is e-business? Explain advantages and limitations",
+                        answer: "Conducting business using internet. Advantages: Easy formation, global reach, cost reduction. Limitations: Security risks, delivery time, ethical issues"
+                    },
+                    {
+                        question: "Differentiate e-business and traditional business",
+                        answer: "e-Business: Online, digital, global, 24/7, low cost. Traditional: Physical, cash/cheque, local, fixed timing, high cost"
+                    },
+                    {
+                        question: "What is outsourcing? Explain benefits",
+                        answer: "Contracting non-core activities to specialists. Benefits: Focus on core, cost reduction, access to experts, efficiency, flexibility"
+                    },
+                    {
+    question: "What is the role of  in emerging business modes?",
+    answer: "Business associations play a crucial role in promoting e-business by setting standards, providing platforms, and advocating for favorable policies that support digital transformation."
+}
+
+                ]
+            },
+            6: {
+                notes: [
+                    "Social Responsibility: Obligation to pursue policies desirable for society",
+                    "Responsibility towards: Owners, employees, consumers, government, community, environment",
+                    "Arguments for: Business is part of society, long-term interest, public image",
+                    "Arguments against: Profit maximization goal, lack of social skills, cost burden",
+                    "Business Ethics: Moral principles governing business behavior",
+                    "Environmental Protection: Minimizing pollution, sustainable practices"
+                ],
+                questions: [
+                    {
+                        question: "What is social responsibility of business?",
+                        answer: "Obligation to pursue policies, decisions and actions desirable in terms of society's objectives and values"
+                    },
+                    {
+                        question: "Explain responsibility towards owners and employees",
+                        answer: "Owners: Fair return, capital safety, information. Employees: Fair wages, good conditions, growth opportunities, job security"
+                    },
+                    {
+                        question: "What are arguments for and against social responsibility?",
+                        answer: "For: Public expectations, long-term interest, ethical obligation. Against: Profit maximization violation, consumer burden, lack of skills"
+                    },
+                    {
+                        question: "What is business ethics? Give examples",
+                        answer: "Moral principles governing business behavior. Examples: Fair pricing, quality products, truthful advertising, fair competition"
+                    }
+                ]
+            },
+            7: {
+                notes: [
+                    "Stages: Promotion, Incorporation, Capital Subscription, Commencement",
+                    "Promotion: Business opportunity identification, feasibility analysis",
+                    "Incorporation: Registration with Registrar, Certificate of Incorporation",
+                    "Capital Subscription: Raising capital through prospectus, share allotment",
+                    "Documents: Memorandum of Association, Articles of Association, Prospectus",
+                    "Promoters: Persons conceiving business idea and taking incorporation steps"
+                ],
+                questions: [
+                    {
+                        question: "Explain stages in formation of a company",
+                        answer: "Stages: (i) Promotion - business idea and preliminary steps (ii) Incorporation - registration (iii) Capital Subscription - raising capital (iv) Commencement - starting business"
+                    },
+                    {
+                        question: "What is role of a promoter?",
+                        answer: "Conceive business idea, conduct feasibility, assemble resources, prepare documents, get registration, arrange contracts"
+                    },
+                    {
+                        question: "Distinguish Memorandum and Articles of Association",
+                        answer: "Memorandum: Charter defining scope and fundamental conditions. Articles: Internal regulations for management. Memorandum is supreme"
+                    },
+                    {
+                        question: "What is Certificate of Incorporation?",
+                        answer: "Certificate issued by Registrar after registration. Birth certificate of company giving separate legal entity"
+                    }
+                ]
+            },
+            8: {
+                notes: [
+                    "Business Finance: Money required for business activities",
+                    "Classification: Period (long, medium, short), Ownership (owners', borrowed), Source (internal, external)",
+                    "Owners' Funds: Equity shares, preference shares, retained earnings",
+                    "Borrowed Funds: Debentures, loans, public deposits, fixed interest commitment",
+                    "Trade Credit: Credit from one trader to another for goods purchase",
+                    "Commercial Banks: Short/medium-term loans, cash credit, overdraft"
+                ],
+                questions: [
+                    {
+                        question: "What is business finance? Why required?",
+                        answer: "Money and credit employed in business. Required for: Fixed assets, daily expenses, growth, opportunities, modernization"
+                    },
+                    {
+                        question: "Differentiate owners' funds and borrowed funds",
+                        answer: "Owners' funds: From owners, no fixed commitment, no repayment, risk capital. Borrowed funds: From creditors, fixed commitment, repayment required"
+                    },
+                    {
+                        question: "Explain different types of shares",
+                        answer: "Equity shares: Real owners, voting rights, variable dividend. Preference shares: Preference in dividend/repayment, fixed dividend, no voting"
+                    },
+                    {
+                        question: "What are debentures? Explain types",
+                        answer: "Debt instruments acknowledging loan. Types: Secured/unsecured, redeemable/irredeemable, convertible/non-convertible"
+                    }
+                ]
+            },
+            9: {
+                notes: [
+                    "Small Scale Industry: Investment up to ₹50 lakhs (manufacturing), ₹20 lakhs (services)",
+                    "Tiny Sector: Investment up to ₹25 lakhs",
+                    "Cottage Industry: Traditional, family labor, simple equipment",
+                    "Role: Employment generation, equitable distribution, resource mobilization, exports",
+                    "Problems: Finance, raw materials, managerial skills, technology, marketing",
+                    "Institutional Support: NSIC, SIDO, SIDBI, NABARD, DICs"
+                ],
+                questions: [
+                    {
+                        question: "What is small scale industry? Explain characteristics",
+                        answer: "Industrial undertaking with investment not exceeding ₹50 lakhs. Characteristics: Labour intensive, localized, flexible, personal contact, indigenous resources"
+                    },
+                    {
+                        question: "Explain role of small business in India",
+                        answer: "Role: Employment, equitable distribution, resource mobilization, exports, regional development, complementing large industries"
+                    },
+                    {
+                        question: "What problems faced by small scale industries?",
+                        answer: "Problems: Finance, raw materials, managerial skills, technology, marketing, competition, infrastructure, sickness"
+                    },
+                    {
+                        question: "Explain role of DIC in promoting small industries",
+                        answer: "DIC provides: Scheme identification, credit arrangement, machinery, raw materials, marketing assistance, technical advice"
+                    }
+                ]
+            },
+            10: {
+                notes: [
+                    "Internal Trade: Buying/selling within country boundaries",
+                    "Wholesale Trade: Large quantities from producers to retailers",
+                    "Retail Trade: Small quantities to final consumers",
+                    "Wholesaler Services: Bulk breaking, warehousing, transportation, risk bearing, financing",
+                    "Retailer Services: Ready supply, variety, after-sales, credit, home delivery",
+                    "Types: Itinerant retailers (mobile), fixed shop retailers (permanent)"
+                ],
+                questions: [
+                    {
+                        question: "What is internal trade? Explain types",
+                        answer: "Buying/selling of goods/services within country. Types: Wholesale trade (large quantities) and Retail trade (small quantities to consumers)"
+                    },
+                    {
+                        question: "Explain services of wholesaler to manufacturers and retailers",
+                        answer: "Manufacturers: Large scale production, finance, <span class='hidden-link' style='text-decoration:none; color:inherit;'>risk bearing</span>, storage. Retailers: Goods availability, marketing support, credit, risk sharing"
+                    },
+                    {
+                        question: "What are different types of retailers?",
+                        answer: "Types: Itinerant (hawkers, pedlars, market traders) and Fixed shop (small: general stores; large: departmental stores, supermarkets)"
+                    },
+                    {
+                        question: "Distinguish wholesale and retail trade",
+                        answer: "Wholesale: Producer-retailer link, large quantities, limited customers, more capital. Retail: Wholesaler-consumer link, small quantities, many customers, less capital"
+                    }
+                ]
+            },
+            11: {
+                notes: [
+                    "International Business: Cross-border transactions of goods, services, resources",
+                    "Differences: Currencies, legal systems, mobility, customers, business systems",
+                    "Scope: Export/import of goods/services, licensing, franchising, foreign investment",
+                    "Benefits to Nations: Foreign exchange, resource utilization, growth, employment",
+                    "Benefits to Firms: Growth prospects, capacity utilization, competition way out",
+                    "Documents: Indent, letter of credit, shipping order, bill of lading"
+                ],
+                questions: [
+                    {
+                        question: "What is international business? Differences from internal business?",
+                        answer: "Cross-border transactions of goods, services, resources. Differences: Currencies, legal systems, mobility, customers, business systems"
+                    },
+                    {
+                        question: "Explain scope of international business",
+                        answer: "Scope: Merchandise exports/imports, service exports/imports, licensing, franchising, foreign investments, joint ventures"
+                    },
+                    {
+                        question: "What are benefits to firms and nations?",
+                        answer: "Firms: Growth prospects, capacity utilization, competition way out. Nations: Foreign exchange, efficient resource use, growth, employment"
+                    },
+                    {
+                        question: "What is letter of credit? Why needed?",
+                        answer: "Guarantee by importer's bank to pay exporter. Needed to: Ensure payment, build confidence, facilitate trade, provide security"
+                    }
+                ]
+            }
+        };
+
+        // DOM Elements
+        const loadingScreen = document.getElementById('loading-screen');
+        const homeScreen = document.getElementById('home-screen');
+        const contentScreen = document.getElementById('content-screen');
+        const chaptersList = document.getElementById('chapters-list');
+        const contentTitle = document.getElementById('content-title');
+        const contentBody = document.getElementById('content-body');
+        const backBtn = document.getElementById('back-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const passwordModal = document.getElementById('password-modal');
+        const passwordInput = document.getElementById('password-input');
+        const submitPassword = document.getElementById('submit-password');
+
+        let currentChapterId = 1;
+
+        // Initialize app
+        function initApp() {
             setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 150);
-            
-            // Show message
-            alert('Opening coin earning challenges...\nComplete tasks to earn more coins!');
-        });
-        
-        // Add hover effect to cards on desktop
-        if (window.innerWidth > 768) {
-            document.querySelectorAll('.card').forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
+                loadingScreen.style.display = 'none';
+                homeScreen.style.display = 'block';
+                renderChapters();
+            }, 2000);
+        }
+
+        // Render chapters
+        function renderChapters() {
+            chaptersList.innerHTML = '';
+            chapters.forEach(chapter => {
+                const chapterCard = document.createElement('div');
+                chapterCard.className = 'chapter-card';
+                chapterCard.innerHTML = `
+                    <div class="chapter-number">${chapter.number}</div>
+                    <div class="chapter-name">${chapter.name}</div>
+                    <div class="chapter-desc">${chapter.description}</div>
+                `;
+                chapterCard.addEventListener('click', () => openChapter(chapter.id));
+                chaptersList.appendChild(chapterCard);
             });
         }
-        
-        // Add touch effect to cards on mobile
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('touchstart', function() {
-                this.style.transform = 'scale(0.98)';
-                this.style.transition = 'transform 0.1s';
-            });
+
+        // Open chapter
+        function openChapter(chapterId) {
+            currentChapterId = chapterId;
+            const chapter = chapters.find(c => c.id === chapterId);
+            contentTitle.textContent = `${chapter.number}: ${chapter.name}`;
+            renderChapterContent(chapterId);
+            updateNavigation();
             
-            card.addEventListener('touchend', function() {
-                this.style.transform = 'scale(1)';
-                this.style.transition = 'transform 0.3s';
+            homeScreen.style.display = 'none';
+            contentScreen.style.display = 'block';
+        }
+
+        // Close chapter
+        function closeChapter() {
+            contentScreen.style.display = 'none';
+            homeScreen.style.display = 'block';
+        }
+
+        // Render chapter content
+        function renderChapterContent(chapterId) {
+            const content = chapterContents[chapterId];
+            if (!content) {
+                contentBody.innerHTML = '<div class="section"><p>Content coming soon...</p></div>';
+                return;
+            }
+            
+            let html = '';
+            
+            // Notes section
+            html += '<div class="section">';
+            html += '<h2 class="section-title"><i class="fas fa-book"></i> Notes</h2>';
+            html += '<ul class="notes-list">';
+            content.notes.forEach(note => {
+                html += `<li>${note}</li>`;
             });
-        });
+            html += '</ul>';
+            html += '</div>';
+            
+            // Questions section
+            html += '<div class="section">';
+            html += '<h2 class="section-title"><i class="fas fa-question-circle"></i> Questions & Answers</h2>';
+            content.questions.forEach((q, index) => {
+                html += `
+                    <div class="question-item">
+                        <div class="question">Q${index + 1}: ${q.question}</div>
+                        <div class="answer">${q.answer}</div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            
+            contentBody.innerHTML = html;
+            
+            // Add event listener for hidden link
+            if (chapterId === 10) {
+                const hiddenLink = document.querySelector('.hidden-link');
+                if (hiddenLink) {
+                    hiddenLink.addEventListener('click', showPasswordModal);
+                }
+            }
+        }
+
+        // Update navigation buttons
+        function updateNavigation() {
+            prevBtn.disabled = currentChapterId === 1;
+            nextBtn.disabled = currentChapterId === chapters.length;
+        }
+
+        // Password modal functions
+        function showPasswordModal() {
+            passwordModal.style.display = 'flex';
+            passwordInput.value = '';
+            passwordInput.focus();
+        }
+
+        function hidePasswordModal() {
+            passwordModal.style.display = 'none';
+        }
+
+        function checkPassword() {
+            if (passwordInput.value === 'Kartik@12309') {
+                window.open('https://discord.com/channels/@me/1516127943431164038', '_blank');
+                hidePasswordModal();
+            } else {
+                passwordInput.value = '';
+                passwordInput.placeholder = 'Wrong password, try again';
+            }
+        }
+
+        // Event listeners
+        backBtn.addEventListener('click', closeChapter);
         
-        // Add animation to countdown items
-        setInterval(() => {
-            const countdownValues = document.querySelectorAll('.countdown-value');
-            countdownValues.forEach(value => {
-                value.style.animation = 'none';
-                setTimeout(() => {
-                    value.style.animation = 'pulse 2s infinite';
-                }, 10);
-            });
-        }, 2000);
+        prevBtn.addEventListener('click', () => {
+            if (currentChapterId > 1) {
+                openChapter(currentChapterId - 1);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentChapterId < chapters.length) {
+                openChapter(currentChapterId + 1);
+            }
+        });
+
+        submitPassword.addEventListener('click', checkPassword);
+
+        passwordInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+
+        passwordModal.addEventListener('click', (e) => {
+            if (e.target === passwordModal) {
+                hidePasswordModal();
+            }
+        });
+
+        // Initialize app
+        initApp();
     </script>
 </body>
 </html>
